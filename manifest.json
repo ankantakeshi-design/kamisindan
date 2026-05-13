@@ -1,0 +1,21 @@
+{
+  "name": "FWtest",
+  "short_name": "FWtest",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0F0F1A",
+  "theme_color": "#0F0F1A",
+  "icons": [
+    {
+      "src": "192fw.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "512fw.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
