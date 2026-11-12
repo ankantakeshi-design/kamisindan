@@ -1842,6 +1842,7 @@ body::before{
 .type-desc-card{border-left-color:var(--fire);border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.05);}
 .device-block{background:#ffffff;border-color:rgba(0,0,0,0.08);}
 .device-label{color:rgba(15,15,26,0.5);}
+.note-btn.rec-btn{background:linear-gradient(135deg,var(--fire2),var(--water2));color:#ffffff;border:none;}
 #install-accordion-hero-trigger{color:var(--dark) !important;}
 #install-accordion-hero{border-radius:16px;}
 #hero-other-apps-accordion{border-color:rgba(0,0,0,0.1) !important;background:#ffffff !important;border-radius:16px !important;}
@@ -2294,6 +2295,10 @@ body::before{
           自分らしく生きやすくなるための考え方を、たけちゃんが丁寧に解説しています。
         </div>
         <div class="note-btns">
+          <a class="note-btn rec-btn" id="note-btn-rec" href="https://note.com/takekasui/n/n1520667d524e" target="_blank" style="display:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
+            <span id="note-btn-rec-label">あなたにおすすめの記事</span>
+          </a>
           <a class="note-btn" id="note-btn1" href="https://note.com/takekasui/n/nec95c6d76159" target="_blank">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
             火水性質をもっと深く知る（note記事）
@@ -5849,5 +5854,32 @@ function updateLangTrigger(lang) {
     <p>此診斷需要 JavaScript。請確認您的瀏覽器設定。</p>
   </div>
 </noscript>
+
+<script id="type-rec-2026">
+(function(){
+  var REC = {
+    H: { href: 'https://note.com/takekasui/n/n1520667d524e', label: '火が強いあなたにおすすめ｜火と水は、もとは同じもの' },
+    M: { href: 'https://note.com/takekasui/n/n936a67ab849e', label: 'バランスタイプにおすすめ｜火水の全体像マップ' },
+    L: { href: 'https://note.com/takekasui/n/n1520667d524e', label: '水が強いあなたにおすすめ｜火と水は、もとは同じもの' }
+  };
+  function updateTypeRec(){
+    try {
+      var btn = document.getElementById('note-btn-rec');
+      if (!btn) return;
+      if (typeof currentLang !== 'undefined' && currentLang !== 'ja') { btn.style.display = 'none'; return; }
+      if (typeof lastResult === 'undefined' || !lastResult || !lastResult.typeKey) return;
+      var rec = REC[lastResult.typeKey.charAt(0)] || REC.M;
+      btn.href = rec.href;
+      var lab = document.getElementById('note-btn-rec-label');
+      if (lab) lab.textContent = rec.label;
+      btn.style.display = '';
+    } catch (e) {}
+  }
+  if (typeof showResult === 'function') {
+    var origShowResult = showResult;
+    showResult = function(){ var r = origShowResult.apply(this, arguments); setTimeout(updateTypeRec, 50); return r; };
+  }
+})();
+</script>
 </body>
 </html>
