@@ -3,8 +3,8 @@
   "short_name": "FWtest",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0F0F1A",
-  "theme_color": "#0F0F1A",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
   "icons": [
     {
       "src": "192fw.png",
