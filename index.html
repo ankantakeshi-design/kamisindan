@@ -2314,6 +2314,9 @@ body::before{
           <a class="note-btn" id="note-btn4" href="https://www.instagram.com/aitakeshi485" target="_blank" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);">
             📸 Instagramをフォロー
           </a>
+          <a class="note-btn" id="omikuji-btn" href="https://kamimikuji.pages.dev" target="_blank" style="background:linear-gradient(90deg,#FF7A45,#4A90D9);font-size:15px;">
+            🔥☔ 今日の火水おみくじを引く（無料・登録不要）
+          </a>
         </div>
       </div>
     </div>
@@ -4393,14 +4396,9 @@ function applyHeroTranslations() {
   // note リンクを言語に合わせて更新
   const nb1 = document.getElementById('note-btn1');
   const nb2 = document.getElementById('note-btn2');
-  if (nb1) nb1.href = currentLang === 'en' ? 'https://note.com/takekasui/n/nbd75c8ef8fba'
-                    : currentLang === 'ko' ? 'https://note.com/takekasui/n/n986f72364a08'
-                    : currentLang === 'zh' ? 'https://note.com/takekasui/n/nec95c6d76159'
-                    : 'https://note.com/takekasui/n/nec95c6d76159';
-  if (nb2) nb2.href = currentLang === 'en' ? 'https://note.com/takekasui/n/n9b0da5388d92'
-                    : currentLang === 'ko' ? 'https://note.com/takekasui/n/n29a630f0ee25'
-                    : currentLang === 'zh' ? 'https://note.com/takekasui/n/nf4b821d392f8'
-                    : 'https://note.com/takekasui/n/nf4b821d392f8';
+  // 外国語版の記事は下書きに戻したため、全言語で日本語版の記事に統一（2026-11-13 リンク切れ修理）
+  if (nb1) nb1.href = 'https://note.com/takekasui/n/nec95c6d76159';
+  if (nb2) nb2.href = 'https://note.com/takekasui/n/nf4b821d392f8';
 
   // 英語タイトルは横幅が広いので絵文字と縦積みに切り替え
   const titleWrap = document.getElementById('hero-title-wrap');
@@ -4491,15 +4489,11 @@ function applyResultTranslations() {
   const svgIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>`;
   if (noteBtn1El) {
     noteBtn1El.innerHTML = svgIcon + t.noteBtn1;
-    noteBtn1El.href = currentLang === 'en' ? 'https://note.com/takekasui/n/nbd75c8ef8fba'
-                    : currentLang === 'ko' ? 'https://note.com/takekasui/n/n986f72364a08'
-                    : 'https://note.com/takekasui/n/nec95c6d76159';
+    noteBtn1El.href = 'https://note.com/takekasui/n/nec95c6d76159';
   }
   if (noteBtn2El) {
     noteBtn2El.innerHTML = svgIcon + t.noteBtn2;
-    noteBtn2El.href = currentLang === 'en' ? 'https://note.com/takekasui/n/n9b0da5388d92'
-                    : currentLang === 'ko' ? 'https://note.com/takekasui/n/n29a630f0ee25'
-                    : 'https://note.com/takekasui/n/nf4b821d392f8';
+    noteBtn2El.href = 'https://note.com/takekasui/n/nf4b821d392f8';
   }
   s('note-btn3', `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>${t.noteBtn3}`);
   s('note-btn4', t.noteBtn4);
