@@ -1851,6 +1851,8 @@ body::before{
 #hero-other-apps-accordion{border-color:rgba(0,0,0,0.1) !important;background:#ffffff !important;border-radius:16px !important;}
 #hero-other-apps-accordion > button{color:rgba(15,15,26,0.75) !important;}
 #hero-other-apps-body{border-top-color:rgba(0,0,0,0.08) !important;}
+/* 2026-11-18: explanation moved after the quiz (result screen) */
+#screen-result .hero-what{max-width:100%;margin:8px auto 0;}
 </style>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -1890,28 +1892,9 @@ body::before{
 
     <button class="hero-btn" onclick="startQuiz()" id="hero-start-btn">診断をはじめよう<br><span style="font-size:0.75em;font-weight:400;letter-spacing:2px;">(30問・約3分)</span></button>
 
-    <!-- 火水とは？ -->
-    <div class="hero-what" id="hero-what">
-      <button class="hero-what-trigger" onclick="toggleHeroWhat()">
-        <span id="hero-what-title">🔥 火・☔ 水って何？</span>
-        <span class="hero-what-chevron">▼</span>
-      </button>
-      <div class="hero-what-body">
-        <div class="hero-what-item">
-          <span class="hw-icon">🔥</span>
-          <span id="hero-fire-desc"><strong>火</strong>…自己主張・行動力・意志・情熱・境界線を守る力</span>
-        </div>
-        <div class="hero-what-item">
-          <span class="hw-icon">☔</span>
-          <span id="hero-water-desc"><strong>水</strong>…共感力・受容・つながり・柔軟性・人を受け取る力</span>
-        </div>
-        <div class="hero-what-note" id="hero-what-note">誰もが火と水を持っています。その割合とバランスが、あなたらしさをつくっています。</div>
-      </div>
-    </div>
-
     <!-- その他の無料アプリ アコーディオン（ヒーロー） -->
     <div id="hero-other-apps-accordion" style="
-      margin-top:24px;
+      margin-top:56px;
       width:100%;max-width:440px;
       border:1px solid rgba(255,255,255,0.1);
       border-radius:8px;
@@ -2298,6 +2281,25 @@ body::before{
       </button>
       <div class="other-apps-body" id="share-buttons-wrap">
         <div id="share-buttons" style="display:flex;flex-direction:column;gap:0;"></div>
+      </div>
+    </div>
+
+    <!-- 火水とは？（説明は診断の後：結果画面に配置） -->
+    <div class="hero-what" id="hero-what">
+      <button class="hero-what-trigger" onclick="toggleHeroWhat()">
+        <span id="hero-what-title">🔥 火・☔ 水って何？</span>
+        <span class="hero-what-chevron">▼</span>
+      </button>
+      <div class="hero-what-body">
+        <div class="hero-what-item">
+          <span class="hw-icon">🔥</span>
+          <span id="hero-fire-desc"><strong>火</strong>…自己主張・行動力・意志・情熱・境界線を守る力</span>
+        </div>
+        <div class="hero-what-item">
+          <span class="hw-icon">☔</span>
+          <span id="hero-water-desc"><strong>水</strong>…共感力・受容・つながり・柔軟性・人を受け取る力</span>
+        </div>
+        <div class="hero-what-note" id="hero-what-note">誰もが火と水を持っています。その割合とバランスが、あなたらしさをつくっています。</div>
       </div>
     </div>
 
