@@ -1831,6 +1831,9 @@ body::before{
 .app-card-link--5w1h   { background:#FFF8E1; color:#5A3A00; }
 .app-card-link--senryu { background:#FEFAE0; color:#5A4200; }
 .app-card-link--mentalgacha{ background:#E8FFF0; color:#0A4020; }
+.app-card-link--mori   { background:#E7F5EC; color:#14532D; }
+.app-card-link--hotto  { background:#FFF1F2; color:#7A1F2B; }
+.app-card-link--omupan { background:#FDF3E3; color:#6B4423; }
 
 /* ── HERO APP BUTTONS ── */
 .h-app-btn{
@@ -1863,6 +1866,9 @@ body::before{
 .h-app-btn--5w1h   { background:rgba(230,170,0,0.28);  color:rgba(255,240,160,0.95); }
 .h-app-btn--senryu { background:rgba(200,150,20,0.28); color:rgba(255,235,140,0.95); }
 .h-app-btn--mentalgacha{ background:rgba(20,180,100,0.28); color:rgba(160,255,210,0.95); }
+.h-app-btn--mori   { background:rgba(30,140,80,0.35);  color:rgba(190,255,215,0.95); }
+.h-app-btn--hotto  { background:rgba(200,60,80,0.30);  color:rgba(255,205,215,0.95); }
+.h-app-btn--omupan { background:rgba(200,130,50,0.32); color:rgba(255,230,190,0.95); }
 </style>
 
 <style id="pop-restyle-2026">
@@ -1918,6 +1924,12 @@ body::before{
 .h-app-btn--5w1h{background:#FFF8E1;color:#5A3A00;}
 .h-app-btn--senryu{background:#FEFAE0;color:#5A4200;}
 .h-app-btn--mentalgacha{background:#E8FFF0;color:#0A4020;}
+.h-app-btn--mori{background:#E7F5EC;color:#14532D;}
+.h-app-btn--hotto{background:#FFF1F2;color:#7A1F2B;}
+.h-app-btn--omupan{background:#FDF3E3;color:#6B4423;}
+.app-card-link--mori{background:#E7F5EC;color:#14532D;}
+.app-card-link--hotto{background:#FFF1F2;color:#7A1F2B;}
+.app-card-link--omupan{background:#FDF3E3;color:#6B4423;}
 .lang-dropdown{background:#ffffff;border-color:rgba(0,0,0,0.1);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.12);}
 .lang-btn{color:rgba(15,15,26,0.6);}
 .lang-btn.active{background:rgba(0,0,0,0.07);color:var(--dark);}
@@ -2001,11 +2013,21 @@ body::before{
         <span id="hero-other-apps-chevron" style="font-size:11px;opacity:0.7;transition:transform 0.3s;margin-left:8px;">▼</span>
       </button>
       <div id="hero-other-apps-body" style="display:none;padding:8px 12px 14px;border-top:1px solid rgba(255,255,255,0.1);">
-        <!-- HP -->
-        <a href="https://sintaichoseijyuku.pages.dev/" target="_blank" class="h-app-btn h-app-btn--hp">
-          <span class="h-app-btn__emoji">💃</span>
+        <!-- 集まれ水女子の森 -->
+        <a href="https://mizujoshinomori.pages.dev/" target="_blank" class="h-app-btn h-app-btn--mori">
+          <span class="h-app-btn__emoji">🌳</span>
           <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app-hp-name">心体調整塾 ホームページ</div>
+            <div class="h-app-btn__name" id="h-app-mori-name">集まれ水女子の森</div>
+            <div class="h-app-btn__desc" id="h-app-mori-desc">新月・満月、月のリズムで穏やかな毎日を</div>
+          </div>
+          <span class="h-app-btn__arr">▶</span>
+        </a>
+        <!-- 森のほっとニュース -->
+        <a href="https://hotto-news.pages.dev/" target="_blank" class="h-app-btn h-app-btn--hotto">
+          <span class="h-app-btn__emoji">📰</span>
+          <div class="h-app-btn__body">
+            <div class="h-app-btn__name" id="h-app-hotto-name">森のほっとニュース</div>
+            <div class="h-app-btn__desc" id="h-app-hotto-desc">毎朝、心が温まるニュースをお届け</div>
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
@@ -2027,38 +2049,12 @@ body::before{
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
-        <!-- アプリ全部まとめ -->
-        <a href="https://lit.link/aitakeshi" target="_blank" class="h-app-btn h-app-btn--list">
-          <span class="h-app-btn__emoji">🙋</span>
-          <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app-list-name">アプリ全部まとめはこちら</div>
-          </div>
-          <span class="h-app-btn__arr">▶</span>
-        </a>
-        <!-- 火水診断 -->
-        <a href="https://kamisindan.pages.dev" target="_blank" class="h-app-btn h-app-btn--kamisin">
-          <span class="h-app-btn__emoji">🔥☔</span>
-          <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app-kamisin-name">火水診断</div>
-            <div class="h-app-btn__desc" id="h-app-kamisin-desc">12タイプ・キャラクター ✏💃</div>
-          </div>
-          <span class="h-app-btn__arr">▶</span>
-        </a>
         <!-- 火水おみくじ -->
         <a href="https://kamimikuji.pages.dev" target="_blank" class="h-app-btn h-app-btn--omikuji">
           <span class="h-app-btn__emoji">🎋</span>
           <div class="h-app-btn__body">
             <div class="h-app-btn__name" id="h-app1-name">火水おみくじ</div>
             <div class="h-app-btn__desc" id="h-app1-desc">自分らしく生きやすく 👍</div>
-          </div>
-          <span class="h-app-btn__arr">▶</span>
-        </a>
-        <!-- ZANGE -->
-        <a href="https://zangeforgive.pages.dev" target="_blank" class="h-app-btn h-app-btn--zange">
-          <span class="h-app-btn__emoji">🕯️</span>
-          <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app3-name">ZANGE 懺悔</div>
-            <div class="h-app-btn__desc" id="h-app3-desc">自分を許して軽くなる</div>
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
@@ -2071,45 +2067,41 @@ body::before{
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
-        <!-- バランストレーニング -->
-        <a href="https://balancetraning.pages.dev/" target="_blank" class="h-app-btn h-app-btn--balance">
-          <span class="h-app-btn__emoji">⚖️</span>
+        <!-- ZANGE -->
+        <a href="https://zangeforgive.pages.dev" target="_blank" class="h-app-btn h-app-btn--zange">
+          <span class="h-app-btn__emoji">🕯️</span>
           <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app-balance-name">言葉とメンタルのバランストレーニング</div>
+            <div class="h-app-btn__name" id="h-app3-name">ZANGE 懺悔</div>
+            <div class="h-app-btn__desc" id="h-app3-desc">自分を許して軽くなる</div>
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
-        <!-- バカウケ5W1H -->
-        <a href="https://warainpic.pages.dev" target="_blank" class="h-app-btn h-app-btn--5w1h">
-          <span class="h-app-btn__emoji">ꉂ🤣</span>
+        <!-- おむすびパンダ -->
+        <a href="https://omusubi-panda.pages.dev/" target="_blank" class="h-app-btn h-app-btn--omupan">
+          <span class="h-app-btn__emoji">🐼</span>
           <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app-5w1h-name">バカウケ５Ｗ１Ｈ</div>
-            <div class="h-app-btn__desc" id="h-app-5w1h-desc">笑いのオリンピック 🏅</div>
+            <div class="h-app-btn__name" id="h-app-omupan-name">おむすびパンダ</div>
+            <div class="h-app-btn__desc" id="h-app-omupan-desc">今日のごはんと試食のサイト</div>
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
-        <!-- バカウケ川柳 -->
-        <a href="https://bakaukesenryu.pages.dev" target="_blank" class="h-app-btn h-app-btn--senryu">
-          <span class="h-app-btn__emoji">🎋</span>
+        <!-- HP -->
+        <a href="https://sintaichoseijyuku.pages.dev/" target="_blank" class="h-app-btn h-app-btn--hp">
+          <span class="h-app-btn__emoji">💃</span>
           <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app4-name">バカウケ川柳</div>
-            <div class="h-app-btn__desc" id="h-app4-desc">爆笑575ガチャ ꉂ🤣</div>
+            <div class="h-app-btn__name" id="h-app-hp-name">心体調整塾 ホームページ</div>
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
-        <!-- メンタルガチャあげ -->
-        <a href="https://mentalgachaup.pages.dev" target="_blank" class="h-app-btn h-app-btn--mentalgacha">
-          <span class="h-app-btn__emoji">🤣⤴</span>
+        <!-- アプリ全部まとめ -->
+        <a href="https://takechanlink.pages.dev/" target="_blank" class="h-app-btn h-app-btn--list">
+          <span class="h-app-btn__emoji">🙋</span>
           <div class="h-app-btn__body">
-            <div class="h-app-btn__name" id="h-app-mentalgacha-name">メンタル ガチャあげ🤣⤴</div>
-            <div class="h-app-btn__desc" id="h-app-mentalgacha-desc">メンタルサプリの救世主！？</div>
+            <div class="h-app-btn__name" id="h-app-list-name">たけちゃんリンク</div>
           </div>
           <span class="h-app-btn__arr">▶</span>
         </a>
-      </div>
-    </div>
-
-    <!-- ══ インストールアコーディオン（ヒーロー） ══ -->
+<!-- ══ インストールアコーディオン（ヒーロー） ══ -->
     <div style="width:100%;max-width:440px;margin-top:16px;margin-bottom:8px;">
       <div class="other-apps-accordion" id="install-accordion-hero" style="border:1.5px solid rgba(74,158,245,0.35);background:rgba(74,158,245,0.07);">
         <button class="other-apps-toggle" onclick="toggleInstallAccordionHero()" aria-expanded="false" id="install-accordion-hero-trigger" style="color:rgba(255,255,255,0.85);font-size:13px;">
@@ -2474,11 +2466,21 @@ body::before{
         <span class="other-apps-chevron" id="other-apps-chevron">▼</span>
       </button>
       <div class="other-apps-body" id="other-apps-body">
-        <!-- HP -->
-        <a class="app-card-link app-card-link--hp" href="https://sintaichoseijyuku.pages.dev/" target="_blank">
-          <span class="app-card-emoji">💃</span>
+        <!-- 集まれ水女子の森 -->
+        <a class="app-card-link app-card-link--mori" href="https://mizujoshinomori.pages.dev/" target="_blank">
+          <span class="app-card-emoji">🌳</span>
           <div class="app-card-body">
-            <div class="app-card-name" id="app-hp-name">心体調整塾 ホームページ</div>
+            <div class="app-card-name" id="app-mori-name">集まれ水女子の森</div>
+            <div class="app-card-desc" id="app-mori-desc">新月・満月、月のリズムで穏やかな毎日を</div>
+          </div>
+          <span class="app-card-arrow">▶</span>
+        </a>
+        <!-- 森のほっとニュース -->
+        <a class="app-card-link app-card-link--hotto" href="https://hotto-news.pages.dev/" target="_blank">
+          <span class="app-card-emoji">📰</span>
+          <div class="app-card-body">
+            <div class="app-card-name" id="app-hotto-name">森のほっとニュース</div>
+            <div class="app-card-desc" id="app-hotto-desc">毎朝、心が温まるニュースをお届け</div>
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
@@ -2500,38 +2502,12 @@ body::before{
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
-        <!-- アプリ一覧 -->
-        <a class="app-card-link app-card-link--list" href="https://lit.link/aitakeshi" target="_blank">
-          <span class="app-card-emoji">🙋</span>
-          <div class="app-card-body">
-            <div class="app-card-name" id="app-list-name">アプリ全部まとめはこちら</div>
-          </div>
-          <span class="app-card-arrow">▶</span>
-        </a>
-        <!-- 火水診断 -->
-        <a class="app-card-link app-card-link--kamisin" href="https://kamisindan.pages.dev" target="_blank">
-          <span class="app-card-emoji">🔥☔</span>
-          <div class="app-card-body">
-            <div class="app-card-name" id="app-kamisin-name">火水診断</div>
-            <div class="app-card-desc" id="app-kamisin-desc">12タイプ・キャラクター ✏💃</div>
-          </div>
-          <span class="app-card-arrow">▶</span>
-        </a>
         <!-- 火水おみくじ -->
         <a class="app-card-link app-card-link--omikuji" href="https://kamimikuji.pages.dev" target="_blank">
           <span class="app-card-emoji">🎋</span>
           <div class="app-card-body">
             <div class="app-card-name" id="app1-name">火水おみくじ</div>
             <div class="app-card-desc" id="app1-desc">自分らしく生きやすく 👍</div>
-          </div>
-          <span class="app-card-arrow">▶</span>
-        </a>
-        <!-- ZANGE -->
-        <a class="app-card-link app-card-link--zange" href="https://zangeforgive.pages.dev" target="_blank">
-          <span class="app-card-emoji">🕯️</span>
-          <div class="app-card-body">
-            <div class="app-card-name" id="app3-name">ZANGE 懺悔</div>
-            <div class="app-card-desc" id="app3-desc">自分を許して軽くなる</div>
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
@@ -2544,45 +2520,41 @@ body::before{
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
-        <!-- バランス -->
-        <a class="app-card-link app-card-link--balance" href="https://balancetraning.pages.dev/" target="_blank">
-          <span class="app-card-emoji">⚖️</span>
+        <!-- ZANGE -->
+        <a class="app-card-link app-card-link--zange" href="https://zangeforgive.pages.dev" target="_blank">
+          <span class="app-card-emoji">🕯️</span>
           <div class="app-card-body">
-            <div class="app-card-name" id="app-balance-name">言葉とメンタルのバランストレーニング</div>
+            <div class="app-card-name" id="app3-name">ZANGE 懺悔</div>
+            <div class="app-card-desc" id="app3-desc">自分を許して軽くなる</div>
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
-        <!-- バカウケ5W1H -->
-        <a class="app-card-link app-card-link--5w1h" href="https://warainpic.pages.dev" target="_blank">
-          <span class="app-card-emoji">ꉂ🤣</span>
+        <!-- おむすびパンダ -->
+        <a class="app-card-link app-card-link--omupan" href="https://omusubi-panda.pages.dev/" target="_blank">
+          <span class="app-card-emoji">🐼</span>
           <div class="app-card-body">
-            <div class="app-card-name" id="app-5w1h-name">バカウケ５Ｗ１Ｈ</div>
-            <div class="app-card-desc" id="app-5w1h-desc">笑いのオリンピック 🏅</div>
+            <div class="app-card-name" id="app-omupan-name">おむすびパンダ</div>
+            <div class="app-card-desc" id="app-omupan-desc">今日のごはんと試食のサイト</div>
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
-        <!-- バカウケ川柳 -->
-        <a class="app-card-link app-card-link--senryu" href="https://bakaukesenryu.pages.dev" target="_blank">
-          <span class="app-card-emoji">🎋</span>
+        <!-- HP -->
+        <a class="app-card-link app-card-link--hp" href="https://sintaichoseijyuku.pages.dev/" target="_blank">
+          <span class="app-card-emoji">💃</span>
           <div class="app-card-body">
-            <div class="app-card-name" id="app4-name">バカウケ川柳</div>
-            <div class="app-card-desc" id="app4-desc">爆笑575ガチャ ꉂ🤣</div>
+            <div class="app-card-name" id="app-hp-name">心体調整塾 ホームページ</div>
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
-        <!-- メンタルガチャあげ -->
-        <a class="app-card-link app-card-link--mentalgacha" href="https://mentalgachaup.pages.dev" target="_blank">
-          <span class="app-card-emoji">🤣⤴</span>
+        <!-- アプリ一覧 -->
+        <a class="app-card-link app-card-link--list" href="https://takechanlink.pages.dev/" target="_blank">
+          <span class="app-card-emoji">🙋</span>
           <div class="app-card-body">
-            <div class="app-card-name" id="app-mentalgacha-name">メンタル ガチャあげ🤣⤴</div>
-            <div class="app-card-desc" id="app-mentalgacha-desc">メンタルサプリの救世主！？</div>
+            <div class="app-card-name" id="app-list-name">たけちゃんリンク</div>
           </div>
           <span class="app-card-arrow">▶</span>
         </a>
-      </div>
-    </div>
-
-    <!-- プロフィール -->
+<!-- プロフィール -->
     <div class="profile-section fade-up">
       <div class="profile-inner">
         <div class="profile-avatar-wrap">
@@ -2808,7 +2780,7 @@ const I18N = {
     compareSectionTitle2: '📊 前回との比較',
     otherAppsTitle: '📱 その他の無料アプリを見てみる',
     appHpName: '💃 心体調整塾 ホームページ',
-    appListName: '🙋 アプリ全部まとめはこちら',
+    appListName: 'たけちゃんリンク',
     appKamisinName: '火水診断', appKamisinDesc: '12タイプ・キャラクター ✏💃',
     app1Name: '火水おみくじ', app1Desc: '自分らしく生きやすく 👍',
     app2Name: '素直力トレーニング', app2Desc: '人生を好転させる',
@@ -2817,6 +2789,9 @@ const I18N = {
     app5w1hName: 'バカウケ５Ｗ１Ｈ ꉂ🤣', app5w1hDesc: '笑いのオリンピック 🏅',
     app4Name: 'バカウケ川柳 🎋', app4Desc: '爆笑575ガチャ ꉂ🤣',
     appMentalGachaName: 'メンタル ガチャあげ🤣⤴', appMentalGachaDesc: 'メンタルサプリの救世主！？',
+    appMoriName: '集まれ水女子の森', appMoriDesc: '新月・満月、月のリズムで穏やかな毎日を',
+    appHottoName: '森のほっとニュース', appHottoDesc: '毎朝、心が温まるニュースをお届け',
+    appOmupanName: 'おむすびパンダ', appOmupanDesc: '今日のごはんと試食のサイト',
     installTitle: '📲 アプリをインストールする',
     installAndroidHeading: '🤖 Android',
     installAndroidBtn: 'ホーム画面に追加',
@@ -2929,7 +2904,7 @@ const I18N = {
     compareSectionTitle2: '📊 vs. Last Time',
     otherAppsTitle: '📱 Explore Other Free Apps',
     appHpName: '💃 Shintai Balance School — Website',
-    appListName: '🙋 All My Apps in One Place',
+    appListName: 'Takechan Link 🙋',
     appKamisinName: 'Fire & Water Personality Test', appKamisinDesc: '12 Character Types ✏💃',
     app1Name: 'Fire & Water Fortune 🎋', app1Desc: 'Live more comfortably as yourself 👍',
     app2Name: 'Open Heart Training ☯️', app2Desc: 'Transform Your Life',
@@ -2938,6 +2913,9 @@ const I18N = {
     app5w1hName: 'Baka-Uke 5W1H ꉂ🤣', app5w1hDesc: 'The Olympics of Laughter 🏅',
     app4Name: 'Baka-Uke Senryu 🎋', app4Desc: 'Hilarious 5-7-5 Gacha ꉂ🤣',
     appMentalGachaName: 'Mental Gacha Up🤣⤴', appMentalGachaDesc: 'The Savior of Mental Supplements!?',
+    appMoriName: 'Forest of Water Women 🌳', appMoriDesc: 'Live gently with the rhythm of the moon',
+    appHottoName: 'Forest Feel-Good News 📰', appHottoDesc: 'Heartwarming news every morning',
+    appOmupanName: 'Omusubi Panda 🐼', appOmupanDesc: 'Daily meals and tasty samples',
     installTitle: '📲 Install the App',
     installAndroidHeading: '🤖 Android',
     installAndroidBtn: 'Add to Home Screen',
@@ -3045,7 +3023,7 @@ const I18N = {
     compareSectionTitle2: '📊 지난번과 비교',
     otherAppsTitle: '📱 다른 무료 앱도 살펴보기',
     appHpName: '💃 심체조정숙 홈페이지',
-    appListName: '🙋 앱 전체 모아보기',
+    appListName: '타케짱 링크 🙋',
     appKamisinName: '화수 성격 테스트 🔥☔', appKamisinDesc: '12타입・캐릭터 ✏💃',
     app1Name: '화수 오미쿠지 🎋', app1Desc: '나답게 살기 편하게 👍',
     app2Name: '솔직함 트레이닝 ☯️', app2Desc: '인생을 좋은 방향으로',
@@ -3054,6 +3032,9 @@ const I18N = {
     app5w1hName: '바카우케 5W1H ꉂ🤣', app5w1hDesc: '웃음의 올림픽 🏅',
     app4Name: '바카우케 센류 🎋', app4Desc: '폭소 5-7-5 가챠 ꉂ🤣',
     appMentalGachaName: '멘탈 가챠업🤣⤴', appMentalGachaDesc: '멘탈 영양제의 구세주！？',
+    appMoriName: '물여자들의 숲 🌳', appMoriDesc: '달의 리듬으로 평온한 매일을',
+    appHottoName: '숲의 따뜻한 뉴스 📰', appHottoDesc: '매일 아침, 마음이 따뜻해지는 뉴스',
+    appOmupanName: '오무스비 판다 🐼', appOmupanDesc: '오늘의 밥과 시식 사이트',
     installTitle: '📲 앱 설치하기',
     installAndroidHeading: '🤖 Android',
     installAndroidBtn: '홈 화면에 추가',
@@ -3166,7 +3147,7 @@ const I18N = {
     compareSectionTitle2: '📊 與上次的比較',
     otherAppsTitle: '📱 探索其他免費應用程式',
     appHpName: '💃 心體調整塾 官方網站',
-    appListName: '🙋 所有應用程式一覽',
+    appListName: 'Takechan 連結 🙋',
     appKamisinName: '火水性格診斷 🔥☔', appKamisinDesc: '12種類型・角色 ✏💃',
     app1Name: '火水御神籤 🎋', app1Desc: '活出更輕鬆的自己 👍',
     app2Name: '坦誠訓練 ☯️', app2Desc: '讓人生往好的方向轉變',
@@ -3175,6 +3156,9 @@ const I18N = {
     app5w1hName: '爆笑5W1H ꉂ🤣', app5w1hDesc: '笑聲奧運會 🏅',
     app4Name: '爆笑川柳 🎋', app4Desc: '爆笑5-7-5扭蛋 ꉂ🤣',
     appMentalGachaName: '心理扭蛋UP🤣⤴', appMentalGachaDesc: '心靈補給的救世主！？',
+    appMoriName: '水女子之森 🌳', appMoriDesc: '跟著月亮的節奏，過平靜的每一天',
+    appHottoName: '森林暖心新聞 📰', appHottoDesc: '每天早晨，送上溫暖人心的新聞',
+    appOmupanName: '飯糰熊貓 🐼', appOmupanDesc: '今日餐點與試吃網站',
     installTitle: '📲 安裝應用程式',
     installAndroidHeading: '🤖 Android',
     installAndroidBtn: '新增至主畫面',
@@ -4573,7 +4557,7 @@ function applyHeroTranslations() {
   const hs = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
   hs('hero-other-apps-title', t.otherAppsTitle || '📱 その他の無料アプリを見てみる');
   hs('h-app-hp-name',   t.appHpName   || '💃 心体調整塾 ホームページ');
-  hs('h-app-list-name', t.appListName || '🙋 アプリ全部まとめはこちら');
+  hs('h-app-list-name', t.appListName || 'たけちゃんリンク');
   hs('h-app-kamisin-name', t.appKamisinName || '火水診断');
   hs('h-app-kamisin-desc', t.appKamisinDesc || '12タイプ・キャラクター ✏💃');
   hs('h-app1-name', t.app1Name || '火水おみくじ');
@@ -4589,6 +4573,12 @@ function applyHeroTranslations() {
   hs('h-app4-desc', t.app4Desc || '爆笑575ガチャ ꉂ🤣');
   hs('h-app-mentalgacha-name', t.appMentalGachaName || 'メンタル ガチャあげ🤣⤴');
   hs('h-app-mentalgacha-desc', t.appMentalGachaDesc || 'メンタルサプリの救世主！？');
+  hs('h-app-mori-name', t.appMoriName || '集まれ水女子の森');
+  hs('h-app-mori-desc', t.appMoriDesc || '新月・満月、月のリズムで穏やかな毎日を');
+  hs('h-app-hotto-name', t.appHottoName || '森のほっとニュース');
+  hs('h-app-hotto-desc', t.appHottoDesc || '毎朝、心が温まるニュースをお届け');
+  hs('h-app-omupan-name', t.appOmupanName || 'おむすびパンダ');
+  hs('h-app-omupan-desc', t.appOmupanDesc || '今日のごはんと試食のサイト');
   hs('install-accordion-hero-title', t.installTitle || '📲 アプリをインストールする');
   hs('h-install-android-heading', t.installAndroidHeading || '🤖 Android');
   hs('h-install-android-btn-text', t.installAndroidBtn || 'ホーム画面に追加');
@@ -4724,7 +4714,7 @@ function applyResultTranslations() {
   // other apps accordion
   s('other-apps-title', t.otherAppsTitle || '📱 その他の無料アプリを見てみる');
   s('app-hp-name',   t.appHpName   || '💃 心体調整塾 ホームページ');
-  s('app-list-name', t.appListName || '🙋 アプリ全部まとめはこちら');
+  s('app-list-name', t.appListName || 'たけちゃんリンク');
   s('app-kamisin-name', t.appKamisinName || '火水診断');
   s('app-kamisin-desc', t.appKamisinDesc || '12タイプ・キャラクター ✏💃');
   s('app1-name', t.app1Name || '火水おみくじ');
@@ -4740,6 +4730,12 @@ function applyResultTranslations() {
   s('app4-desc', t.app4Desc || '爆笑575ガチャ ꉂ🤣');
   s('app-mentalgacha-name', t.appMentalGachaName || 'メンタル ガチャあげ🤣⤴');
   s('app-mentalgacha-desc', t.appMentalGachaDesc || 'メンタルサプリの救世主！？');
+  s('app-mori-name', t.appMoriName || '集まれ水女子の森');
+  s('app-mori-desc', t.appMoriDesc || '新月・満月、月のリズムで穏やかな毎日を');
+  s('app-hotto-name', t.appHottoName || '森のほっとニュース');
+  s('app-hotto-desc', t.appHottoDesc || '毎朝、心が温まるニュースをお届け');
+  s('app-omupan-name', t.appOmupanName || 'おむすびパンダ');
+  s('app-omupan-desc', t.appOmupanDesc || '今日のごはんと試食のサイト');
   // install accordion
   s('install-accordion-title', t.installTitle || '📲 アプリをインストールする');
   s('install-android-heading', t.installAndroidHeading || '🤖 Android');
